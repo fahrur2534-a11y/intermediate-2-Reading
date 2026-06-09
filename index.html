@@ -1,127 +1,380 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About My Family - Writing Exercise</title>
+
+<title>Intermediate Reading Task - Online Learning</title>
 
 <style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    background:#f4f6f9;
+  font-family:Arial, sans-serif;
+  background:#f4f7fb;
+  color:#333;
+  padding:20px;
+  line-height:1.6;
 }
 
 .container{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.1);
+  max-width:1100px;
+  margin:auto;
+  background:#fff;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
-h1,h2{
-    color:#2c3e50;
+h1{
+  text-align:center;
+  color:#2c3e50;
+  margin-bottom:10px;
 }
 
-textarea{
-    width:100%;
-    min-height:120px;
-    padding:10px;
-    margin-top:10px;
+.subtitle{
+  text-align:center;
+  color:#666;
+  margin-bottom:25px;
 }
 
-input{
-    padding:8px;
-    margin:5px;
+.instructions{
+  background:#eef6ff;
+  border-left:5px solid #3498db;
+  padding:15px;
+  border-radius:8px;
+  margin-bottom:20px;
+}
+
+.text-box{
+  background:#fafafa;
+  padding:20px;
+  border-radius:8px;
+  margin-bottom:30px;
+}
+
+.question{
+  background:#fafafa;
+  padding:15px;
+  border-radius:8px;
+  margin-bottom:15px;
+}
+
+.question p{
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+label{
+  display:block;
+  margin:6px 0;
+  cursor:pointer;
 }
 
 button{
-    background:#3498db;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:5px;
-    cursor:pointer;
+  width:100%;
+  padding:15px;
+  background:#3498db;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:20px;
 }
 
 button:hover{
-    background:#2980b9;
+  background:#2980b9;
+}
+
+#result{
+  margin-top:25px;
+  text-align:center;
+  font-size:24px;
+  font-weight:bold;
 }
 
 .correct{
-    color:green;
-    font-weight:bold;
+  color:green;
 }
 
 .wrong{
-    color:red;
-    font-weight:bold;
+  color:red;
 }
+
+.answer-key{
+  margin-top:40px;
+  background:#f9f9f9;
+  padding:20px;
+  border-radius:10px;
+}
+
+.answer-key h2{
+  margin-bottom:15px;
+}
+
+.answer-key ol{
+  margin-left:20px;
+}
+
+.answer-key li{
+  margin-bottom:6px;
+}
+
 </style>
 </head>
+
 <body>
 
 <div class="container">
 
-<hr>
+<h1>INTERMEDIATE READING TASK</h1>
 
-<h2>Part A: Fill in the blanks</h2>
+<div class="subtitle">
+Topic: Online Learning
+</div>
 
-<p>1. Kelly lives in
-<input id="q1"></p>
+<div class="instructions">
+<strong>Instruction:</strong><br>
+Read the text carefully and choose the best answer (A, B, C, or D) for each question.
+</div>
 
-<p>2. Kelly's mother's name is
-<input id="q2"></p>
+<div class="text-box">
 
-<p>3. Kelly's father works in a
-<input id="q3"></p>
+<h2>Text</h2>
 
-<p>4. Kelly's sister loves listening to
-<input id="q4"></p>
+<p>
+Online learning has become an important part of education in recent years. Many schools and universities use online platforms to support teaching and learning activities. Students can attend classes using laptops or smartphones from their homes.
+</p>
 
-<p>5. Brandy is a pet
-<input id="q5"></p>
+<p>
+One advantage of online learning is flexibility. Students can learn anytime and anywhere as long as they have an internet connection. This helps students manage their time more easily, especially when they have other activities.
+</p>
 
-<button onclick="checkAnswers()">Check Answers</button>
+<p>
+Online learning also provides access to many learning resources. Students can watch recorded lessons, download materials, and join virtual discussions with teachers and classmates. This makes learning more interactive and interesting.
+</p>
 
-<p id="result"></p>
+<p>
+However, online learning also has some challenges. Some students have difficulty focusing because they study at home where there are many distractions. In addition, internet connection problems can interrupt classes and make learning less effective.
+</p>
 
-<hr>
+<p>
+Another problem is the lack of direct interaction. Students may feel less connected to their teachers and friends. This can reduce motivation and participation in learning activities.
+</p>
 
-<h2>Part B: Write About Your Family</h2>
+<p>
+Despite these challenges, online learning is still considered useful in modern education. Many experts believe that it will continue to be part of the future of learning, especially when combined with traditional classroom teaching.
+</p>
 
-<p>Write 5–8 sentences about your family.</p>
+</div>
 
-<textarea placeholder="My name is..."></textarea>
+<form id="quizForm">
+
+<div class="question">
+<p>1. What is the main topic of the text?</p>
+<label><input type="radio" name="q1" value="B"> A. Traditional schools</label>
+<label><input type="radio" name="q1" value="B"> B. Online learning</label>
+<label><input type="radio" name="q1" value="C"> C. School uniforms</label>
+<label><input type="radio" name="q1" value="D"> D. Sports activities</label>
+</div>
+
+<div class="question">
+<p>2. Where can students attend online classes?</p>
+<label><input type="radio" name="q2" value="A"> A. Only at school</label>
+<label><input type="radio" name="q2" value="B"> B. Only at libraries</label>
+<label><input type="radio" name="q2" value="C"> C. At home using devices</label>
+<label><input type="radio" name="q2" value="D"> D. Only in computer labs</label>
+</div>
+
+<div class="question">
+<p>3. What is one advantage of online learning?</p>
+<label><input type="radio" name="q3" value="A"> A. No need for teachers</label>
+<label><input type="radio" name="q3" value="B"> B. Flexibility</label>
+<label><input type="radio" name="q3" value="C"> C. No homework</label>
+<label><input type="radio" name="q3" value="D"> D. No internet needed</label>
+</div>
+
+<div class="question">
+<p>4. What do students need for online learning?</p>
+<label><input type="radio" name="q4" value="A"> A. Television</label>
+<label><input type="radio" name="q4" value="B"> B. Internet connection</label>
+<label><input type="radio" name="q4" value="C"> C. Newspapers</label>
+<label><input type="radio" name="q4" value="D"> D. Radios</label>
+</div>
+
+<div class="question">
+<p>5. What can students do in online learning?</p>
+<label><input type="radio" name="q5" value="A"> A. Only read books</label>
+<label><input type="radio" name="q5" value="B"> B. Watch recorded lessons</label>
+<label><input type="radio" name="q5" value="C"> C. Avoid studying</label>
+<label><input type="radio" name="q5" value="D"> D. Stop communication</label>
+</div>
+
+<div class="question">
+<p>6. What is one challenge of online learning?</p>
+<label><input type="radio" name="q6" value="A"> A. Too many sports</label>
+<label><input type="radio" name="q6" value="B"> B. Better focus</label>
+<label><input type="radio" name="q6" value="C"> C. Distractions at home</label>
+<label><input type="radio" name="q6" value="D"> D. No teachers</label>
+</div>
+
+<div class="question">
+<p>7. What problem can interrupt online classes?</p>
+<label><input type="radio" name="q7" value="A"> A. Weather changes</label>
+<label><input type="radio" name="q7" value="B"> B. Internet connection problems</label>
+<label><input type="radio" name="q7" value="C"> C. School uniforms</label>
+<label><input type="radio" name="q7" value="D"> D. Books shortage</label>
+</div>
+
+<div class="question">
+<p>8. What is missing in online learning?</p>
+<label><input type="radio" name="q8" value="A"> A. Food</label>
+<label><input type="radio" name="q8" value="B"> B. Direct interaction</label>
+<label><input type="radio" name="q8" value="C"> C. Homework</label>
+<label><input type="radio" name="q8" value="D"> D. Exams</label>
+</div>
+
+<div class="question">
+<p>9. How may students feel without direct interaction?</p>
+<label><input type="radio" name="q9" value="A"> A. More motivated</label>
+<label><input type="radio" name="q9" value="B"> B. More active</label>
+<label><input type="radio" name="q9" value="C"> C. Less connected</label>
+<label><input type="radio" name="q9" value="D"> D. More focused</label>
+</div>
+
+<div class="question">
+<p>10. What is another effect of online learning challenges?</p>
+<label><input type="radio" name="q10" value="A"> A. Increased participation</label>
+<label><input type="radio" name="q10" value="B"> B. Reduced motivation</label>
+<label><input type="radio" name="q10" value="C"> C. Better communication</label>
+<label><input type="radio" name="q10" value="D"> D. More sports activities</label>
+</div>
+
+<div class="question">
+<p>11. What tools are used for online learning?</p>
+<label><input type="radio" name="q11" value="A"> A. Smartphones and laptops</label>
+<label><input type="radio" name="q11" value="B"> B. Pens only</label>
+<label><input type="radio" name="q11" value="C"> C. Chalk only</label>
+<label><input type="radio" name="q11" value="D"> D. Books only</label>
+</div>
+
+<div class="question">
+<p>12. What can students download in online learning?</p>
+<label><input type="radio" name="q12" value="A"> A. Games</label>
+<label><input type="radio" name="q12" value="B"> B. School materials</label>
+<label><input type="radio" name="q12" value="C"> C. Clothes</label>
+<label><input type="radio" name="q12" value="D"> D. Music videos</label>
+</div>
+
+<div class="question">
+<p>13. What is one benefit of online learning resources?</p>
+<label><input type="radio" name="q13" value="A"> A. Less learning</label>
+<label><input type="radio" name="q13" value="B"> B. More interaction and interest</label>
+<label><input type="radio" name="q13" value="C"> C. No teachers needed</label>
+<label><input type="radio" name="q13" value="D"> D. No exams</label>
+</div>
+
+<div class="question">
+<p>14. What do experts say about online learning?</p>
+<label><input type="radio" name="q14" value="A"> A. It will disappear</label>
+<label><input type="radio" name="q14" value="B"> B. It is useless</label>
+<label><input type="radio" name="q14" value="C"> C. It will continue in the future</label>
+<label><input type="radio" name="q14" value="D"> D. It should be banned</label>
+</div>
+
+<div class="question">
+<p>15. What is the conclusion of the text?</p>
+<label><input type="radio" name="q15" value="A"> A. Online learning is always bad</label>
+<label><input type="radio" name="q15" value="B"> B. Online learning is useless</label>
+<label><input type="radio" name="q15" value="C"> C. Online learning is part of modern education</label>
+<label><input type="radio" name="q15" value="D"> D. Students should stop using technology</label>
+</div>
+
+<button type="button" onclick="checkAnswers()">Submit Answers</button>
+
+</form>
+
+<div id="result"></div>
+
+<div class="answer-key">
+
+<h2>Answer Key</h2>
+<ol>
+<li>B</li>
+<li>C</li>
+<li>B</li>
+<li>B</li>
+<li>B</li>
+<li>C</li>
+<li>B</li>
+<li>B</li>
+<li>C</li>
+<li>B</li>
+<li>A</li>
+<li>B</li>
+<li>B</li>
+<li>C</li>
+<li>C</li>
+</ol>
+
+</div>
 
 </div>
 
 <script>
+
 function checkAnswers(){
 
-let score = 0;
-
 const answers = {
-q1:"california",
-q2:"carmen",
-q3:"bank",
-q4:"music",
-q5:"dog"
+q1:"B",
+q2:"C",
+q3:"B",
+q4:"B",
+q5:"B",
+q6:"C",
+q7:"B",
+q8:"B",
+q9:"C",
+q10:"B",
+q11:"A",
+q12:"B",
+q13:"B",
+q14:"C",
+q15:"C"
 };
 
-for(let id in answers){
-let user = document.getElementById(id).value.trim().toLowerCase();
+let score = 0;
+let total = 15;
 
-if(user === answers[id]){
+for(let key in answers){
+
+const selected = document.querySelector(`input[name="${key}"]:checked`);
+
+if(selected && selected.value === answers[key]){
 score++;
 }
+
 }
 
-document.getElementById("result").innerHTML =
-"You got " + score + " out of 5 correct!";
+const result = document.getElementById("result");
+const percent = Math.round((score/total)*100);
+
+result.innerHTML = `Score: ${score} / ${total} (${percent}%)`;
+
+if(score >= 12){
+result.className = "correct";
+}else{
+result.className = "wrong";
 }
+
+}
+
 </script>
 
 </body>
